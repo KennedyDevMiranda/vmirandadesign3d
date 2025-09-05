@@ -208,7 +208,7 @@ export default function LandingPremium() {
             <h3 className="text-xl md:text-2xl font-semibold">Vamos dar vida ao seu projeto?</h3>
             <p className="text-white/75 mt-2 max-w-xl">Envie plantas, referências e prazos. Respondo com proposta objetiva e cronograma.</p>
           </div>
-          <a href="mailto:servicskennedy@gmail.com" className="rounded-xl bg-white text-black px-5 py-3 text-sm font-semibold hover:bg-white/90 transition inline-flex items-center gap-2"><Mail className="w-4 h-4"/> contato@vmiranda3d.com</a>
+          <a href="mailto:servicskennedy@gmail.com" className="rounded-xl bg-white text-black px-5 py-3 text-sm font-semibold hover:bg-white/90 transition inline-flex items-center gap-2"><Mail className="w-4 h-4"/> servicskennedy@gmail.com</a>
         </div>
       </section>
 
