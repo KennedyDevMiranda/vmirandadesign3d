@@ -20,7 +20,7 @@
       <li id="link2" class="link"><a href="#planos">Preços</a></li>
       <li id="link3" class="link"><a href="#sobre">Sobre</a></li>
     </ul>
-    <button class="btn">Contrate-me</button>
+    <a class="btn" href="#planos">Contrate-me</a>
   </nav>
 
   <header id="inicio" class="container">
@@ -30,7 +30,7 @@
       <h4>NOSSOS SERVIÇOS • SEU SUCESSO</h4>
       <h1>Olá, eu sou <span>Kennedy</span>, TI, Desenvolvedor de software e Designer 3D.</h1>
       <p>Transformo ideias em soluções digitais e modelos 3D que elevam a automação, a estética e a eficiência da sua empresa.</p>
-      <button class="btn">Comece agora</button>
+      <a class="btn" href="#planos">Comece agora</a>
     </div>
     <div class="image">
       <img src="images/header.png" alt="DevMiranda – software e 3D" />
@@ -80,7 +80,7 @@
           <p><i class="ri-checkbox-circle-line"></i> Configuração de domínio e hospedagem</p>
           <p><i class="ri-checkbox-circle-line"></i> Ajustes iniciais e suporte básico</p>
         </div>
-        <button class="btn">Contratar</button>
+        <a class="btn contratar" href="#" data-plan="Essencial">Contratar</a>
       </div>
       <!-- Avançado -->
       <div class="card" aria-label="Plano Avançado">
@@ -92,7 +92,7 @@
           <p><i class="ri-checkbox-circle-line"></i> Identidade visual + SEO básico</p>
           <p><i class="ri-checkbox-circle-line"></i> Suporte mensal e atualizações</p>
         </div>
-        <button class="btn">Contratar</button>
+        <a class="btn contratar" href="#" data-plan="Avançado">Contratar</a>
       </div>
       <!-- Premium -->
       <div class="card" aria-label="Plano Premium">
@@ -105,7 +105,7 @@
           <p><i class="ri-checkbox-circle-line"></i> Inclusão de mockups/design 3D</p>
           <p><i class="ri-checkbox-circle-line"></i> Manutenção técnica e backup</p>
         </div>
-        <button class="btn">Contratar</button>
+        <a class="btn contratar" href="#" data-plan="Premium">Solicitar proposta</a>
       </div>
     </div>
   </section>
@@ -147,6 +147,40 @@
   <div class="copyright">
     Copyright © 2025 DevMiranda. Todos os direitos reservados.
   </div>
+
+  <!-- JS mínimo: WhatsApp + fallback para e-mail (mantém seu CSS) -->
+  <script>
+    (function () {
+      // Substitua pelo seu número com DDI (ex: 55 + DDD + número, sem + e sem espaços)
+      const WHATSAPP_NUMBER = '5528999136612';
+      const EMAIL = 'servicskennedy@gmail.com';
+
+      function openWhatsApp(plan) {
+        const site = document.title || 'DevMiranda';
+        const text = `Olá, Kennedy! Tenho interesse no Plano ${plan} — vi no site ${site}. Podemos conversar?`;
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+      }
+
+      function openMail(plan) {
+        const subject = encodeURIComponent(`Interesse no Plano ${plan} — Site DevMiranda`);
+        const body = encodeURIComponent('Olá, Kennedy! Tenho interesse nesse plano. Pode me enviar mais informações?');
+        window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+      }
+
+      document.querySelectorAll('.contratar').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const plan = this.getAttribute('data-plan') || 'Essencial';
+          if (WHATSAPP_NUMBER && /\d{11,13}/.test(WHATSAPP_NUMBER)) {
+            openWhatsApp(plan);
+          } else {
+            openMail(plan);
+          }
+        });
+      });
+    })();
+  </script>
 
   <script src="script.js"></script>
 </body>
