@@ -3,15 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevMiranda</title>
+  <meta name="description" content="Automação, software sob medida e design 3D para empresas. Transformo ideias em soluções digitais que elevam eficiência e estética." />
+  <link rel="canonical" href="https://vmirandadesign3d.com.br/" />
+
+  <!-- Remix Icons + CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <title>DevMiranda</title>
+
+  <!-- Open Graph / Twitter (preview em redes) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DevMiranda — Automação & Design 3D" />
+  <meta property="og:description" content="Soluções digitais e modelos 3D para automatizar processos e destacar sua marca." />
+  <meta property="og:image" content="https://vmirandadesign3d.com.br/images/og-cover.jpg" />
+  <meta property="og:url" content="https://vmirandadesign3d.com.br/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- (Opcional) Métricas: escolha UM (Plausible ou GA4) e inclua aqui no head -->
+  <!-- <script defer data-domain="vmirandadesign3d.com.br" src="https://plausible.io/js/script.js"></script> -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
+  -->
 </head>
 <body>
   <nav>
     <div class="nav-logo">
       <a href="#inicio">
-        <img src="images/logo.png" alt="DevMiranda" />
+        <img src="images/logo.png" alt="DevMiranda" loading="lazy" width="100" height="100" />
       </a>
     </div>
     <ul class="nav-links">
@@ -33,7 +52,7 @@
       <a class="btn" href="#planos">Comece agora</a>
     </div>
     <div class="image">
-      <img src="images/header.png" alt="DevMiranda – software e 3D" />
+      <img src="images/header.png" alt="DevMiranda – software e 3D" loading="lazy" width="600" height="600" />
     </div>
   </header>
 
@@ -75,7 +94,7 @@
       <div class="card" aria-label="Plano Essencial">
         <div class="content">
           <h4>Plano Essencial</h4>
-          <h3>R$ 299</h3>
+          <h3>R$ 299,99</h3>
           <p><i class="ri-checkbox-circle-line"></i> Landing page (1 página) responsiva</p>
           <p><i class="ri-checkbox-circle-line"></i> Configuração de domínio e hospedagem</p>
           <p><i class="ri-checkbox-circle-line"></i> Ajustes iniciais e suporte básico</p>
@@ -86,7 +105,7 @@
       <div class="card" aria-label="Plano Avançado">
         <div class="content">
           <h4>Plano Avançado</h4>
-          <h3>R$ 899</h3>
+          <h3>R$ 899,99</h3>
           <p><i class="ri-checkbox-circle-line"></i> Site multipáginas com painel simples</p>
           <p><i class="ri-checkbox-circle-line"></i> Integração com banco de dados</p>
           <p><i class="ri-checkbox-circle-line"></i> Identidade visual + SEO básico</p>
@@ -98,7 +117,7 @@
       <div class="card" aria-label="Plano Premium">
         <div class="content">
           <h4>Plano Premium</h4>
-          <h3>A partir de R$ 2.499</h3>
+          <h3>A partir de R$ 2.499,99</h3>
           <p><i class="ri-checkbox-circle-line"></i> Sistema sob medida (ERP/CRM)</p>
           <p><i class="ri-checkbox-circle-line"></i> Integrações com API + relatórios PDF</p>
           <p><i class="ri-checkbox-circle-line"></i> Dashboard financeiro/usuários</p>
@@ -115,7 +134,7 @@
     <span class="blur" aria-hidden="true"></span>
     <div class="column">
       <div class="logo">
-        <img src="images/logo.png" alt="DevMiranda" />
+        <img src="images/logo.png" alt="DevMiranda" loading="lazy" width="100" height="100" />
       </div>
       <p>DevMiranda é a fusão de Automação, Tecnologia e Design 3D. Entrego soluções que simplificam processos, mostram valor visual e impulsionam resultados.</p>
       <div class="socials">
@@ -132,12 +151,13 @@
     </div>
     <div class="column">
       <h4>Legal</h4>
-      <a href="legal.html#privacidade">Política de Privacidade</a>
-      <a href="legal.html#termos">Termos e Condições</a>
+      <!-- apontando para a sua página termos.html com âncoras -->
+      <a href="termos.html#privacidade">Política de Privacidade</a>
+      <a href="termos.html#termos">Termos e Condições</a>
     </div>
     <div class="column" id="contato">
       <h4>Contato</h4>
-      <a href="mailto:contato@vmirandadesign3d.com.br">contato@vmirandadesign3d.com.br</a>
+      <a href="mailto:servicskennedy@gmail.com">servicskennedy@gmail.com</a>
       <a href="#inicio">Voltar ao início</a>
     </div>
   </footer>
@@ -148,8 +168,8 @@
 
   <script>
     (function () {
-      const WHATSAPP_NUMBER = '55XXXXXXXXXX'; // 55 + DDD + número, sem + e sem espaços
-      const EMAIL = 'contato@vmirandadesign3d.com.br';
+      const WHATSAPP_NUMBER = '5528999136612'; // 55 + DDD + número, sem + e sem espaços
+      const EMAIL = 'servicskennedy@gmail.com';
 
       function openWhatsApp(plan) {
         const site = document.title || 'DevMiranda';
@@ -179,5 +199,6 @@
   </script>
 
   <script src="script.js"></script>
+  <script src="/metrics.js" defer></script>
 </body>
 </html>
